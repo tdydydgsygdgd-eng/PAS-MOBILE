@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:flutter_application_2/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,13 +12,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: "Belajar Flutter PPLG 3",
-      home: const Scaffold(
-        body: Center(
-          child: Text("Belajar Flutter PPLG 3"),
-        ),
-      ),
+      initialRoute: Routes.loginClone,
+      getPages: Routes.myPages,
     );
   }
 }

@@ -6,6 +6,7 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:get/get.dart';
 
 import 'package:flutter_application_2/main.dart';
 
@@ -13,6 +14,7 @@ void main() {
   testWidgets('App shows the learning title', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
 
-    expect(find.text('Belajar Flutter PPLG 3'), findsOneWidget);
+    final app = tester.widget<GetMaterialApp>(find.byType(GetMaterialApp));
+    expect(app.title, 'Belajar Flutter PPLG 3');
   });
 }
